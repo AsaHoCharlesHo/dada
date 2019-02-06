@@ -13,11 +13,6 @@ use GuzzleHttp\Client;
 class DadaRequestClient
 {
     /**
-     * http request timeout;
-     */
-    private $httpTimeout = 5;
-
-    /**
      * 配置项
      */
     private $config;
