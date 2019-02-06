@@ -36,7 +36,7 @@ class Order extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new AddOrderApi(json_encode($param));
+        $api = new AddOrderApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -47,7 +47,7 @@ class Order extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new ReAddOrderApi(json_encode($param));
+        $api = new ReAddOrderApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -58,7 +58,7 @@ class Order extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new QueryDeliverFeeApi(json_encode($param));
+        $api = new QueryDeliverFeeApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -69,7 +69,7 @@ class Order extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new AddAfterQueryApi(json_encode($param));
+        $api = new AddAfterQueryApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -80,7 +80,7 @@ class Order extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new QueryStatusApi(json_encode($param));
+        $api = new QueryStatusApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -91,7 +91,7 @@ class Order extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new AddTipApi(json_encode($param));
+        $api = new AddTipApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -102,7 +102,7 @@ class Order extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new FormalCancelApi(json_encode($param));
+        $api = new FormalCancelApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -120,7 +120,7 @@ class Order extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new ConfirmReturnGoodsApi(json_encode($param));
+        $api = new ConfirmReturnGoodsApi($param);
         return $this->handle($api, $this->config);
     }
 }

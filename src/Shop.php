@@ -41,7 +41,7 @@ class Shop extends Base
         if (!is_array($param)) {
             throw new InvalidArgumentException('Invalid format, should be array');
         }
-        $api = new AddMerchantApi(json_encode($param));
+        $api = new AddMerchantApi($param);
         return $this->handle($api, $this->register_config);
     }
 
@@ -52,7 +52,7 @@ class Shop extends Base
         if (!is_array($param)) {
             throw new InvalidArgumentException('Invalid format, should be array');
         }
-        $api = new AddShopApi(json_encode($param));
+        $api = new AddShopApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -63,7 +63,7 @@ class Shop extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new UpdateShopApi(json_encode($param));
+        $api = new UpdateShopApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -74,7 +74,7 @@ class Shop extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new DetailShopApi(json_encode($param));
+        $api = new DetailShopApi($param);
         return $this->handle($api, $this->config);
     }
 }

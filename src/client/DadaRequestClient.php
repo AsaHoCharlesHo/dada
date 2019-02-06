@@ -5,6 +5,7 @@ namespace AsaHoCharlesHo\Dada\Client;
 use AsaHoCharlesHo\Dada\Api\BaseApi;
 use AsaHoCharlesHo\Dada\Config\Config;
 use Dada\Config\DadaConstant;
+use GuzzleHttp\Client;
 
 /**
  * 达达接口请求客户端
@@ -45,7 +46,7 @@ class DadaRequestClient
     public function makeRequest()
     {
         $reqParams = $this->bulidRequestParams();
-        $resp = $this->getHttpRequestWithPost(json_encode($reqParams));
+        $resp = $this->getHttpRequestWithPost($reqParams);
         return $this->parseResponseData($resp);
     }
 
@@ -96,35 +97,17 @@ class DadaRequestClient
     /**
      * 发送请求,POST
      * $url 指定URL完整路径地址
-     * @param $data string 请求的数据
+     * @param $data array 请求的数据
      * @return bool|mixed
      */
     public function getHttpRequestWithPost($data)
     {
-
         $config = $this->config;
         $api = $this->api;
         $url = $config->getHost() . $api->getUrl();
-
-        // json
-        $headers = [
-            'Content-Type: application/json',
-        ];
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($curl, CURLOPT_TIMEOUT, $this->httpTimeout);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-        $resp = curl_exec($curl);
-        $info = curl_getinfo($curl);
-        curl_close($curl);
-        if (isset($info['http_code']) && $info['http_code'] == 200) {
-            return $resp;
-        }
-        return false;
+        $client = new Client;
+        $resp = $client->post($url, ['json' => $data])->getBody();
+        return $resp;
     }
 
     /**

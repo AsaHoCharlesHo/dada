@@ -33,7 +33,7 @@ class TestCallback extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new TestAcceptOrderApi(json_encode($param));
+        $api = new TestAcceptOrderApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -44,7 +44,7 @@ class TestCallback extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new TestCancelOrderApi(json_encode($param));
+        $api = new TestCancelOrderApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -55,7 +55,7 @@ class TestCallback extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new TestFinishOrderApi(json_encode($param));
+        $api = new TestFinishOrderApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -66,7 +66,7 @@ class TestCallback extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new TestFetchOrderApi(json_encode($param));
+        $api = new TestFetchOrderApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -77,7 +77,7 @@ class TestCallback extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new TestExpireOrderApi(json_encode($param));
+        $api = new TestExpireOrderApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -88,7 +88,7 @@ class TestCallback extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new ReturningGoodsApi(json_encode($param));
+        $api = new ReturningGoodsApi($param);
         return $this->handle($api, $this->config);
     }
 }

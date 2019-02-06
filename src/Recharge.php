@@ -29,7 +29,7 @@ class Recharge extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new RechargeApi(json_encode($param));
+        $api = new RechargeApi($param);
         return $this->handle($api, $this->config);
     }
 
@@ -40,7 +40,7 @@ class Recharge extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new QueryBalanceApi(json_encode($param));
+        $api = new QueryBalanceApi($param);
         return $this->handle($api, $this->config);
     }
 }

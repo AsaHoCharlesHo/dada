@@ -14,7 +14,7 @@ class BaseApi
     public function __construct($url, $params)
     {
         $this->url = $url;
-        $this->businessParams = $params;
+        $this->businessParams = empty($params) ? '' : json_encode($params, JSON_UNESCAPED_UNICODE);
     }
 
     public function getUrl()
