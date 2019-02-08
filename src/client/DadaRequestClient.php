@@ -40,7 +40,7 @@ class DadaRequestClient
      */
     public function makeRequest()
     {
-        $reqParams = $this->bulidRequestParams();
+        $reqParams = $this->buildRequestParams();
         $resp = $this->getHttpRequestWithPost($reqParams);
         return $this->parseResponseData($resp);
     }
@@ -49,7 +49,7 @@ class DadaRequestClient
      * 构造请求数据
      * data:业务参数，json字符串
      */
-    public function bulidRequestParams()
+    public function buildRequestParams()
     {
         $config = $this->getConfig();
         $api = $this->getApi();
