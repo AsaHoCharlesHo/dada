@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/10/12
- * Time: 10:29
+
+/*
+ * This file is part of the asa-charles-ho/dada
+ *
+ * (c) asa ho <asa_ho@foxmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace AsaHoCharlesHo\Dada;
@@ -37,6 +40,7 @@ class Order extends Base
         }
 
         $api = new AddOrderApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -48,6 +52,7 @@ class Order extends Base
         }
 
         $api = new ReAddOrderApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -59,6 +64,7 @@ class Order extends Base
         }
 
         $api = new QueryDeliverFeeApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -70,6 +76,7 @@ class Order extends Base
         }
 
         $api = new AddAfterQueryApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -81,6 +88,7 @@ class Order extends Base
         }
 
         $api = new QueryStatusApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -92,6 +100,7 @@ class Order extends Base
         }
 
         $api = new AddTipApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -103,6 +112,7 @@ class Order extends Base
         }
 
         $api = new FormalCancelApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -110,6 +120,7 @@ class Order extends Base
     public function reasons()
     {
         $api = new CancelReasonsApi('');
+
         return $this->handle($api, $this->config);
     }
 
@@ -121,6 +132,7 @@ class Order extends Base
         }
 
         $api = new ConfirmReturnGoodsApi($param);
+
         return $this->handle($api, $this->config);
     }
 }

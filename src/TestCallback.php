@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2018/10/12
- * Time: 10:29
+
+/*
+ * This file is part of the asa-charles-ho/dada
+ *
+ * (c) asa ho <asa_ho@foxmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace AsaHoCharlesHo\Dada;
@@ -34,6 +37,7 @@ class TestCallback extends Base
         }
 
         $api = new TestAcceptOrderApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -45,6 +49,7 @@ class TestCallback extends Base
         }
 
         $api = new TestCancelOrderApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -56,6 +61,7 @@ class TestCallback extends Base
         }
 
         $api = new TestFinishOrderApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -67,6 +73,7 @@ class TestCallback extends Base
         }
 
         $api = new TestFetchOrderApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -78,6 +85,7 @@ class TestCallback extends Base
         }
 
         $api = new TestExpireOrderApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -89,6 +97,7 @@ class TestCallback extends Base
         }
 
         $api = new ReturningGoodsApi($param);
+
         return $this->handle($api, $this->config);
     }
 }

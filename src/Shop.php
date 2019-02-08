@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Asa Ho
- * Date: 2018/12/23
- * Time: 21:54
+
+/*
+ * This file is part of the asa-charles-ho/dada
+ *
+ * (c) asa ho <asa_ho@foxmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace AsaHoCharlesHo\Dada;
@@ -32,6 +35,7 @@ class Shop extends Base
     public function getCityList()
     {
         $api = new CityCodeListApi('');
+
         return $this->handle($api, $this->config);
     }
 
@@ -42,6 +46,7 @@ class Shop extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
         $api = new AddMerchantApi($param);
+
         return $this->handle($api, $this->register_config);
     }
 
@@ -53,6 +58,7 @@ class Shop extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
         $api = new AddShopApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -64,6 +70,7 @@ class Shop extends Base
         }
 
         $api = new UpdateShopApi($param);
+
         return $this->handle($api, $this->config);
     }
 
@@ -75,6 +82,7 @@ class Shop extends Base
         }
 
         $api = new DetailShopApi($param);
+
         return $this->handle($api, $this->config);
     }
 }
