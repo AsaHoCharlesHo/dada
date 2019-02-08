@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the asa-charles-ho/dada
+ *
+ * (c) asa ho <asa_ho@foxmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace AsaHoCharlesHo\Dada\Client;
 
 /**
@@ -7,30 +16,28 @@ namespace AsaHoCharlesHo\Dada\Client;
  */
 class DadaResponse
 {
-
     /**
      * 请求响应返回的数据状态
      */
     public $status;
 
     /**
-     * 请求响应返回的code
+     * 请求响应返回的code.
      */
     public $code;
 
     /**
-     * 请求响应返回的信息
+     * 请求响应返回的信息.
      */
     public $msg;
 
     /**
-     * 请求响应返回的结果
+     * 请求响应返回的结果.
      */
     public $result;
 
-
     /**
-     * 获取返回code
+     * 获取返回code.
      */
     public function getCode()
     {
@@ -43,7 +50,7 @@ class DadaResponse
     }
 
     /**
-     * 获取返回status
+     * 获取返回status.
      */
     public function getStatus()
     {
@@ -56,7 +63,7 @@ class DadaResponse
     }
 
     /**
-     * 获取返回msg
+     * 获取返回msg.
      */
     public function getMsg()
     {
@@ -69,7 +76,7 @@ class DadaResponse
     }
 
     /**
-     * 获取返回result
+     * 获取返回result.
      */
     public function getResult()
     {
@@ -80,5 +87,4 @@ class DadaResponse
     {
         $this->result = $result;
     }
-
 }
