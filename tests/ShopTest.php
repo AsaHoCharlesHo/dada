@@ -29,12 +29,14 @@ class ShopTest extends TestCase
 
     /*public function testGetCityList()
     {
-        $api = new CityCodeListApi();
+        $api = new CityCodeListApi('');
 
         $m = \Mockery::mock(Shop::class, ['mock-source-id', 'false', 'mock-app-key', 'mock-app-secret'])->makePartial();
 
-
         $dada_client = new DadaRequestClient($m->allows()->config, $api);
+
+        $resp = $dada_client->makeRequest();
+
 
         // 创建模拟接口响应值。
         $response = new Response(200, [], '{"success": true}');

@@ -13,7 +13,7 @@ namespace AsaHoCharlesHo\Dada\Client;
 
 use AsaHoCharlesHo\Dada\Api\BaseApi;
 use AsaHoCharlesHo\Dada\Config\Config;
-use Dada\Config\DadaConstant;
+use AsaHoCharlesHo\Dada\Config\DadaConstant;
 use GuzzleHttp\Client;
 
 /**
