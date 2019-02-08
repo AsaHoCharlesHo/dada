@@ -3,6 +3,7 @@
 <p align="center">:rainbow: 基于 达达开放平台 的 PHP 版接口 DEMO 的接口组件。</p>
 
 [![Build Status](https://travis-ci.org/asa-charles-ho/dada.svg?branch=master)](https://travis-ci.org/asa-charles-ho/dada)
+![StyleCI build status](https://github.styleci.io/repos/169403831/shield)
 
 ----------
 
