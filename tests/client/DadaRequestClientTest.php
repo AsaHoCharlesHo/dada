@@ -18,7 +18,7 @@ use PHPUnit\Framework\TestCase;
 
 class DadaRequestClientTest extends TestCase
 {
-    public function testBuildRequestParams()
+    /*public function testBuildRequestParams()
     {
         $config = new Config('10086', true, 'mock-app-key', 'mock-app-secret');
         $param = [
@@ -30,5 +30,5 @@ class DadaRequestClientTest extends TestCase
 
         $this->assertSame('mock-app-key', $requestParams['app_key']);
         $this->assertSame(json_encode($param, JSON_UNESCAPED_UNICODE), $requestParams['body']);
-    }
+    }*/
 }
