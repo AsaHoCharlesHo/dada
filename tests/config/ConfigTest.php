@@ -19,5 +19,11 @@ class ConfigTest extends TestCase
 
         $this->assertSame('10086', $config->getSourceId());
         $this->assertSame('10086', $config->source_id);
+
+        $this->assertSame('mock-app-key', $config->getAppKey());
+        $this->assertSame('mock-app-key', $config->app_key);
+
+        $this->assertSame('mock-app-secret', $config->getAppSecret());
+        $this->assertSame('mock-app-secret', $config->app_secret);
     }
 }
