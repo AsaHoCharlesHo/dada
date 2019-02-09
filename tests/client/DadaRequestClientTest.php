@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Asa Ho
- * Date: 2019/2/9
- * Time: 12:43
+
+/*
+ * This file is part of the asa-charles-ho/dada
+ *
+ * (c) asa ho <asa_ho@foxmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace AsaHoCharlesHo\Dada\Tests;
@@ -19,7 +22,7 @@ class DadaRequestClientTest extends TestCase
     {
         $config = new Config('10086', true, 'mock-app-key', 'mock-app-secret');
         $param = [
-            'mock-param' => 'mock-param-value'
+            'mock-param' => 'mock-param-value',
         ];
         $api = new AddMerchantApi($param);
         $dada_client = new DadaRequestClient($config, $api);
@@ -31,6 +34,5 @@ class DadaRequestClientTest extends TestCase
 
     public function testGetHttpRequestWithPost()
     {
-
     }
 }
