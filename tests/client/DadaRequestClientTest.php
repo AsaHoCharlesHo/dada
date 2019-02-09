@@ -6,7 +6,7 @@
  * Time: 12:43
  */
 
-namespace AsaHoCharlesHo\Dada\Tests;
+namespace AsaHoCharlesHo\Dada\Tests\Client;
 
 use AsaHoCharlesHo\Dada\Config\Config;
 use AsaHoCharlesHo\Dada\Api\AddMerchantApi;
@@ -29,8 +29,8 @@ class DadaRequestClientTest extends TestCase
         $this->assertSame(json_encode($param, JSON_UNESCAPED_UNICODE), $requestParams['body']);
     }
 
-    public function testGetHttpRequestWithPost()
+    /*public function testGetHttpRequestWithPost()
     {
 
-    }
+    }*/
 }

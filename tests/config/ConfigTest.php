@@ -6,7 +6,7 @@
  * Time: 22:56
  */
 
-namespace AsaHoCharlesHo\Dada\Tests;
+namespace AsaHoCharlesHo\Dada\Tests\Config;
 
 use AsaHoCharlesHo\Dada\Config\Config;
 use PHPUnit\Framework\TestCase;
