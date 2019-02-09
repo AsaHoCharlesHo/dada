@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace AsaHoCharlesHo\Dada\Tests;
+namespace AsaHoCharlesHo\Dada\Tests\Client;
 
 use AsaHoCharlesHo\Dada\Config\Config;
 use AsaHoCharlesHo\Dada\Api\AddMerchantApi;
@@ -30,9 +30,5 @@ class DadaRequestClientTest extends TestCase
 
         $this->assertSame('mock-app-key', $requestParams['app_key']);
         $this->assertSame(json_encode($param, JSON_UNESCAPED_UNICODE), $requestParams['body']);
-    }
-
-    public function testGetHttpRequestWithPost()
-    {
     }
 }
