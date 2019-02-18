@@ -15,11 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AsaHoCharlesHo\\Dada\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
+            "AsaHoCharlesHo\\Dada\\": "src",
             "AsaHoCharlesHo\\Dada\\Tests\\": "tests"
         }
     }
