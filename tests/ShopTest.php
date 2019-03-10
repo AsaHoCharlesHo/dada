@@ -11,7 +11,7 @@
 
 namespace AsaHoCharlesHo\Dada\Tests;
 
-use AsaHoCharlesHo\Dada\Api\CityCodeListApi;
+use AsaHoCharlesHo\Dada\Api\neededApi;
 use AsaHoCharlesHo\Dada\Client\DadaRequestClient;
 use AsaHoCharlesHo\Dada\Config\Config;
 use AsaHoCharlesHo\Dada\Shop;

@@ -11,11 +11,7 @@
 
 namespace AsaHoCharlesHo\Dada;
 
-use AsaHoCharlesHo\Dada\Api\AddShopApi;
-use AsaHoCharlesHo\Dada\Api\AddMerchantApi;
-use AsaHoCharlesHo\Dada\Api\UpdateShopApi;
-use AsaHoCharlesHo\Dada\Api\DetailShopApi;
-use AsaHoCharlesHo\Dada\Api\CityCodeListApi;
+use AsaHoCharlesHo\Dada\Api\ApiFactory;
 use AsaHoCharlesHo\Dada\Exceptions\InvalidArgumentException;
 
 class Shop extends Base
@@ -34,7 +30,7 @@ class Shop extends Base
     //获取城市信息接口
     public function getCityList()
     {
-        $api = new CityCodeListApi('');
+        $api = ApiFactory::makeApi('', []);
 
         return $this->handle($api, $this->config);
     }
@@ -45,7 +41,7 @@ class Shop extends Base
         if (!is_array($param)) {
             throw new InvalidArgumentException('Invalid format, should be array');
         }
-        $api = new AddMerchantApi($param);
+        $api = ApiFactory::makeApi('/merchantApi/merchant/add', $param);
 
         return $this->handle($api, $this->register_config);
     }
@@ -57,7 +53,7 @@ class Shop extends Base
         if (!is_array($param)) {
             throw new InvalidArgumentException('Invalid format, should be array');
         }
-        $api = new AddShopApi($param);
+        $api = ApiFactory::makeApi('/api/shop/add', $param);
 
         return $this->handle($api, $this->config);
     }
@@ -69,7 +65,7 @@ class Shop extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new UpdateShopApi($param);
+        $api = ApiFactory::makeApi('/api/shop/update', $param);
 
         return $this->handle($api, $this->config);
     }
@@ -81,7 +77,7 @@ class Shop extends Base
             throw new InvalidArgumentException('Invalid format, should be array');
         }
 
-        $api = new DetailShopApi($param);
+        $api = ApiFactory::makeApi('/api/shop/detail', $param);
 
         return $this->handle($api, $this->config);
     }
