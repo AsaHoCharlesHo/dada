@@ -14,7 +14,7 @@ namespace AsaHoCharlesHo\Dada\Tests;
 use AsaHoCharlesHo\Dada\Api\neededApi;
 use AsaHoCharlesHo\Dada\Client\DadaRequestClient;
 use AsaHoCharlesHo\Dada\Config\Config;
-use AsaHoCharlesHo\Dada\Shop;
+use AsaHoCharlesHo\Dada\Dada;
 use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
 
@@ -22,7 +22,7 @@ class ShopTest extends TestCase
 {
     public function testGetDadaConfig()
     {
-        $shop = new Shop('mock-source-id', 'false', 'mock-app-key', 'mock-app-secret');
+        $shop = new Dada('mock-source-id', 'false', 'mock-app-key', 'mock-app-secret');
 
         $this->assertInstanceOf(Config::class, $shop->getDadaConfig('mock-source-id', 'false'));
     }

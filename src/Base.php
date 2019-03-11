@@ -17,19 +17,30 @@ use AsaHoCharlesHo\daDa\Exceptions\HttpException;
 
 class Base
 {
-    private $app_key;
+    protected $source_id = '';
 
-    private $app_secret;
+    protected $is_online = false;
 
-    public function __construct($app_key, $app_secret)
+    protected $app_key;
+
+    protected $app_secret;
+
+    public function __construct($builder)
     {
-        $this->app_key = $app_key;
-        $this->app_secret = $app_secret;
+        $this->source_id = $builder->source_id;
+        $this->is_online = $builder->is_online;
+        $this->app_key = $builder->app_key;
+        $this->app_secret = $builder->app_secret;
     }
 
-    public function getDadaConfig($source_id, $is_online)
+    public function getDadaConfig()
     {
-        return new config\Config($source_id, $is_online, $this->app_key, $this->app_secret);
+        return new config\Config($this->source_id, $this->is_online, $this->app_key, $this->app_secret);
+    }
+
+    public function getRegisterConfig()
+    {
+        return new config\Config('', $this->is_online, $this->app_key, $this->app_secret);
     }
 
     public function handle($api, $config)
