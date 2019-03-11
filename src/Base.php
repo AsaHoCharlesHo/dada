@@ -13,7 +13,7 @@ namespace AsaHoCharlesHo\Dada;
 
 use AsaHoCharlesHo\Dada\Client\DadaRequestClient;
 use AsaHoCharlesHo\Dada\Config\DadaConstant;
-use AsaHoCharlesHo\daDa\Exceptions\HttpException;
+use AsaHoCharlesHo\DaDa\Exceptions\HttpException;
 
 class Base
 {

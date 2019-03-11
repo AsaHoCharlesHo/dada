@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace AsaHoCharlesHo\daDa\Exceptions;
+namespace AsaHoCharlesHo\DaDa\Exceptions;
 
 class Exception extends \Exception
 {
