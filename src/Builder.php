@@ -1,13 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Asa Ho
- * Date: 2019/3/11
- * Time: 0:25
+
+/*
+ * This file is part of the asa-charles-ho/dada
+ *
+ * (c) asa ho <asa_ho@foxmail.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace AsaHoCharlesHo\Dada;
-
 
 class Builder
 {
@@ -27,18 +29,21 @@ class Builder
     public function turnToOnline()
     {
         $this->is_online = true;
+
         return $this;
     }
 
     public function setAppKey($app_key)
     {
         $this->app_key = $app_key;
+
         return $this;
     }
 
     public function setAppSecret($app_secret)
     {
         $this->app_secret = $app_secret;
+
         return $this;
     }
 
