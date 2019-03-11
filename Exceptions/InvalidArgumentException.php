@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace AsaHoCharlesHo\DaDa\Exceptions;
+namespace AsaHoCharlesHo\Dada\Exceptions;
 
 class InvalidArgumentException extends Exception
 {
