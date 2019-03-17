@@ -38,7 +38,7 @@ class Dada extends Base
     //获取城市信息接口
     public function getCityList()
     {
-        $api = ApiFactory::makeApi('', []);
+        $api = ApiFactory::makeApi('/api/cityCode/list', []);
 
         return $this->handle($api, $this->config);
     }

@@ -11,7 +11,7 @@
 
 namespace AsaHoCharlesHo\Dada\Client;
 
-use AsaHoCharlesHo\Dada\Api\BaseApi;
+use AsaHoCharlesHo\Dada\Api\Api;
 use AsaHoCharlesHo\Dada\Config\Config;
 use AsaHoCharlesHo\Dada\Config\DadaConstant;
 use GuzzleHttp\Client;
@@ -36,7 +36,7 @@ class DadaRequestClient
      * DadaRequestClient constructor.
      *
      * @param $config Config
-     * @param $api BaseApi
+     * @param $api Api
      */
     public function __construct($config, $api)
     {
