@@ -23,7 +23,9 @@
 
 ## 使用 ##
 
-    use AsaHoCharlesHo\Dada\Shop;
+```PHP
+    use AsaHoCharlesHo\Dada\Builder;
+    use AsaHoCharlesHo\Dada\Dada;
     
     $app_key = '****'; // 达达开发者app_key
     
@@ -31,17 +33,24 @@
     
     $source_id = '****'; // 绑定商户的商户 ID
     
-    $is_online = false; // 是否调用达达的线上接口，「false」为测试接口
-    
-    $shop = new Shop($source_id, $is_online, $app_key, $app_secret);
-    
+    $handler = (new Builder($source_id))
+        ->setAppKey($app_key)
+        ->setAppSecret($app_secret)
+    //    ->turnToOnline() // 是否调用达达的线上接口，默认为测试接口
+        ->build();
+   
+``` 
     
 ### 获取城市信息 ###
 
+```PHP
+    $dada = new Dada($handler);
     $response = $shop->getCityList();
+```
 
 #### 示例： ####
 
+```JSON
     {
         "status": "success",
         "code": 0,
@@ -66,6 +75,7 @@
             
         ]
     }
+```
 
 ----------
 
