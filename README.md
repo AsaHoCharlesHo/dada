@@ -84,6 +84,12 @@
 
 [达达开放平台开发文档][3]
 
+field | type | desc
+--- | --- | ---
+`rtn` | int | 结果：0成功
+`data` | str | 返回的数据
+└`access_key` | str | 访问KEY
+└`file_link` | str | 文件公共链接 
 
 ----------
 
